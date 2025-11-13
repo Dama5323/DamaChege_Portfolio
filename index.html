@@ -235,6 +235,49 @@
             color: #D4AF37;
             font-weight: bold;
         }
+        
+        /* Certification card styles */
+        .cert-card {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            background: linear-gradient(145deg, #1a1a1a, #0f0f0f);
+            border: 1px solid rgba(212, 175, 55, 0.1);
+        }
+        
+        .cert-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px -12px rgba(212, 175, 55, 0.25);
+            border-color: rgba(212, 175, 55, 0.3);
+        }
+        
+        .cert-badge {
+            background: linear-gradient(135deg, #D4AF37, #FFD700);
+            color: #000;
+        }
+        
+        .cert-image {
+            transition: transform 0.5s ease;
+            border-radius: 8px;
+        }
+        
+        .cert-card:hover .cert-image {
+            transform: scale(1.05);
+        }
+        
+        /* Filter button active state */
+        .filter-btn.active {
+            background: linear-gradient(90deg, #D4AF37, #FFD700);
+            color: #000;
+        }
+        
+        /* Project card animations */
+        .project-card {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .project-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 25px 50px -12px rgba(212, 175, 55, 0.25);
+        }
     </style>
 </head>
 <body class="font-sans antialiased">
@@ -248,7 +291,7 @@
                         <span class="text-black font-bold text-sm">DC</span>
                     </div>
                     <span class="text-xl font-bold bg-gradient-to-r from-[#D4AF37] to-[#FFD700] bg-clip-text text-transparent group-hover:from-[#FFD700] group-hover:to-[#D4AF37] transition-all">
-                        Damaris Chege
+                        Damaris Chege 
                     </span>
                 </a>
                 
@@ -262,6 +305,9 @@
                     </a>
                     <a href="#skills" class="nav-link relative text-white hover:text-[#D4AF37] font-medium transition-colors duration-300">
                         Skills
+                    </a>
+                    <a href="#certifications" class="nav-link relative text-white hover:text-[#D4AF37] font-medium transition-colors duration-300">
+                        Certifications
                     </a>
                     <a href="#projects" class="nav-link relative text-white hover:text-[#D4AF37] font-medium transition-colors duration-300">
                         Projects
@@ -293,6 +339,9 @@
                 </a>
                 <a href="#skills" class="block px-3 py-2 text-white hover:text-[#D4AF37] hover:bg-gray-800 rounded-md font-medium transition-colors">
                     Skills
+                </a>
+                <a href="#certifications" class="block px-3 py-2 text-white hover:text-[#D4AF37] hover:bg-gray-800 rounded-md font-medium transition-colors">
+                    Certifications
                 </a>
                 <a href="#projects" class="block px-3 py-2 text-white hover:text-[#D4AF37] hover:bg-gray-800 rounded-md font-medium transition-colors">
                     Projects
@@ -715,6 +764,517 @@
             </div>
         </section>
 
+        <!-- Certifications Section -->
+        <section id="certifications" class="py-20 bg-gradient-to-b from-black-900 to-black-800 relative overflow-hidden">
+            <!-- Background Pattern -->
+            <div class="absolute inset-0 opacity-5">
+                <div class="absolute inset-0" style="background-image: url('data:image/svg+xml,%3Csvg width=\"60\" height=\"60\" viewBox=\"0 0 60 60\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cg fill=\"none\" fill-rule=\"evenodd\"%3E%3Cg fill=%22%23D4AF37%22 fill-opacity=%220.4%22%3E%3Cpath d=%22M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')"></div>
+            </div>
+            
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <!-- Header Section -->
+                <div class="text-center mb-16" data-aos="fade-up">
+                    <h2 class="text-4xl lg:text-5xl font-bold text-white mb-4">
+                        Professional 
+                        <span class="gradient-text">Certifications</span>
+                    </h2>
+                    <p class="text-xl text-gray-400 max-w-3xl mx-auto">
+                        Validated expertise in cloud architecture, backend development, and emerging technologies
+                    </p>
+                    <div class="w-24 h-1 bg-gradient-to-r from-yellow-600 to-yellow-600 mx-auto mt-8 rounded-full"></div>
+                </div>
+                
+                <!-- Certifications Grid -->
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- AWS Solutions Architect Associate -->
+                    <div class="cert-card group rounded-2xl p-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="relative h-48 overflow-hidden mb-6">
+                            <img 
+                                src="https://res.cloudinary.com/dzyqof9it/image/upload/v1763034165/WhatsApp_Image_2025-11-13_at_14.42.06_eptpal.jpg"
+                                alt="AWS Solutions Architect Associate Certification" 
+                                class="w-full h-full object-cover cert-image"
+                                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                            >
+                            <!-- Fallback if image fails to load -->
+                            <div class="image-fallback w-full h-full hidden bg-gradient-to-br from-yellow-600 to-yellow-800 flex items-center justify-center">
+                                <i class="fab fa-aws text-white text-5xl"></i>
+                            </div>
+                            <div class="absolute top-4 right-4">
+                                <span class="inline-flex items-center px-3 py-1 text-xs font-medium cert-badge rounded-full">
+                                    AWS
+                                </span>
+                            </div>
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        </div>
+                        
+                        <div class="relative z-10">
+                            <h3 class="text-xl font-bold text-white mb-3 group-hover:text-yellow-400 transition-colors">
+                                AWS Solutions Architect - Associate
+                            </h3>
+                            <p class="text-gray-400 mb-4 leading-relaxed text-sm">
+                                Validated skills in architecting secure and reliable cloud solutions using AWS services, including EC2, S3, RDS, and VPC. Focused on scalability, automation, and cloud cost optimization.
+                            </p>
+                            
+                            <!-- Certification Details -->
+                            <div class="space-y-3 mb-4">
+                                <div class="flex justify-between items-center">
+                                    <span class="text-sm text-gray-400">Issuer:</span>
+                                    <span class="text-sm text-white font-medium">Amazon Web Services (AWS)</span>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <span class="text-sm text-gray-400">Issued:</span>
+                                    <span class="text-sm text-white font-medium">October 2025</span>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <span class="text-sm text-gray-400">Expires:</span>
+                                    <span class="text-sm text-white font-medium">October 2028</span>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <span class="text-sm text-gray-400">Credential ID:</span>
+                                    <span class="text-sm text-white font-medium">5737b31519bd47dcb87968f3ae2a322e</span>
+                                </div>
+                            </div>
+                            
+                            <!-- Skills -->
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="inline-flex items-center px-2 py-1 text-xs font-medium bg-gray-800 text-yellow-400 rounded-full border border-gray-700">
+                                    AWS Cloud Architecture
+                                </span>
+                                <span class="inline-flex items-center px-2 py-1 text-xs font-medium bg-gray-800 text-yellow-400 rounded-full border border-gray-700">
+                                    Cloud Security
+                                </span>
+                                <span class="inline-flex items-center px-2 py-1 text-xs font-medium bg-gray-800 text-yellow-400 rounded-full border border-gray-700">
+                                    Scalability
+                                </span>
+                                <span class="inline-flex items-center px-2 py-1 text-xs font-medium bg-gray-800 text-yellow-400 rounded-full border border-gray-700">
+                                    Cloud Infrastructure Design
+                                </span>
+                                <span class="inline-flex items-center px-2 py-1 text-xs font-medium bg-gray-800 text-yellow-400 rounded-full border border-gray-700">
+                                    AWS Cloud Migration
+                                </span>
+                                <span class="inline-flex items-center px-2 py-1 text-xs font-medium bg-gray-800 text-yellow-400 rounded-full border border-gray-700">
+                                    Serverless architectures 
+                                </span>
+                            </div>
+                            
+                            <!-- Action Links -->
+                            <div class="flex justify-between items-center">
+                                <a href="http://aws.training/certification" target="_blank" 
+                                class="text-yellow-400 hover:text-yellow-300 font-semibold text-sm inline-flex items-center transition-colors">
+                                    <i class="fas fa-external-link-alt mr-1"></i> Verify
+                                </a>
+                                <div class="text-gray-500 text-xs">
+                                    SAA-C03
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- AWS Cloud Practitioner -->
+                    <div class="cert-card group rounded-2xl p-6" data-aos="fade-up" data-aos-delay="200">
+                        <div class="relative h-48 overflow-hidden mb-6">
+                            <img 
+                                src="https://res.cloudinary.com/dzyqof9it/image/upload/v1758428431/certification/b5vvkm4dwnwah0uqmq0j.png"
+                                alt="AWS Cloud Practitioner Certification" 
+                                class="w-full h-full object-cover cert-image"
+                                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                            >
+                            <!-- Fallback if image fails to load -->
+                            <div class="image-fallback w-full h-full hidden bg-gradient-to-br from-blue-600 to-blue-800 flex items-center justify-center">
+                                <i class="fab fa-aws text-white text-5xl"></i>
+                            </div>
+                            <div class="absolute top-4 right-4">
+                                <span class="inline-flex items-center px-3 py-1 text-xs font-medium cert-badge rounded-full">
+                                    AWS
+                                </span>
+                            </div>
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        </div>
+                        
+                        <div class="relative z-10">
+                            <h3 class="text-xl font-bold text-white mb-3 group-hover:text-yellow-400 transition-colors">
+                                AWS Certified Cloud Practitioner
+                            </h3>
+                            <p class="text-gray-400 mb-4 leading-relaxed text-sm">
+                                Foundational understanding of AWS Cloud concepts, services, security, architecture, pricing, and support. Demonstrated cloud fluency and AWS fundamentals.
+                            </p>
+                            
+                            <!-- Certification Details -->
+                            <div class="space-y-3 mb-4">
+                                <div class="flex justify-between items-center">
+                                    <span class="text-sm text-gray-400">Issuer:</span>
+                                    <span class="text-sm text-white font-medium">Amazon Web Services (AWS)</span>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <span class="text-sm text-gray-400">Issued:</span>
+                                    <span class="text-sm text-white font-medium">June 2025</span>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <span class="text-sm text-gray-400">Expires:</span>
+                                    <span class="text-sm text-white font-medium">June 2028</span>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <span class="text-sm text-gray-400">Credential ID:</span>
+                                    <span class="text-sm text-white font-medium">5252b19971a94ffda639909e015c878d</span>
+                                </div>
+                            </div>
+                            
+                            <!-- Skills -->
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="inline-flex items-center px-2 py-1 text-xs font-medium bg-gray-800 text-yellow-400 rounded-full border border-gray-700">
+                                    Cloud Computing
+                                </span>
+                                <span class="inline-flex items-center px-2 py-1 text-xs font-medium bg-gray-800 text-yellow-400 rounded-full border border-gray-700">
+                                    AWS Fundamentals
+                                </span>
+                                <span class="inline-flex items-center px-2 py-1 text-xs font-medium bg-gray-800 text-yellow-400 rounded-full border border-gray-700">
+                                    Cloud Security
+                                </span>
+                                <span class="inline-flex items-center px-2 py-1 text-xs font-medium bg-gray-800 text-yellow-400 rounded-full border border-gray-700">
+                                    AWS Services
+                                </span>
+                            </div>
+                            
+                            <!-- Action Links -->
+                            <div class="flex justify-between items-center">
+                                <a href="https://aws.amazon.com/verification" target="_blank" 
+                                class="text-yellow-400 hover:text-yellow-300 font-semibold text-sm inline-flex items-center transition-colors">
+                                    <i class="fas fa-external-link-alt mr-1"></i> Verify
+                                </a>
+                                <div class="text-gray-500 text-xs">
+                                    CLF-C02
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Back-End Web Development -->
+                    <div class="cert-card group rounded-2xl p-6" data-aos="fade-up" data-aos-delay="300">
+                        <div class="relative h-48 overflow-hidden mb-6">
+                            <img 
+                                src="https://res.cloudinary.com/dzyqof9it/image/upload/v1758428342/certification/merokavgloneu2khmorp.png"
+                                alt="Back-End Web Development Certification" 
+                                class="w-full h-full object-cover cert-image"
+                                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                            >
+                            <!-- Fallback if image fails to load -->
+                            <div class="image-fallback w-full h-full hidden bg-gradient-to-br from-green-600 to-green-800 flex items-center justify-center">
+                                <i class="fas fa-code text-white text-5xl"></i>
+                            </div>
+                            <div class="absolute top-4 right-4">
+                                <span class="inline-flex items-center px-3 py-1 text-xs font-medium cert-badge rounded-full">
+                                    ALX
+                                </span>
+                            </div>
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        </div>
+                        
+                        <div class="relative z-10">
+                            <h3 class="text-xl font-bold text-white mb-3 group-hover:text-yellow-400 transition-colors">
+                                Back-End Web Development
+                            </h3>
+                            <p class="text-gray-400 mb-4 leading-relaxed text-sm">
+                                Completed a rigorous 4-month intensive Software Engineering program specializing in Back-End Web Development. Gained comprehensive expertise in Python programming, Django framework, RESTful API development, database design, and software engineering principles.
+                            </p>
+                            
+                            <!-- Certification Details -->
+                            <div class="space-y-3 mb-4">
+                                <div class="flex justify-between items-center">
+                                    <span class="text-sm text-gray-400">Issuer:</span>
+                                    <span class="text-sm text-white font-medium">ALX Africa</span>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <span class="text-sm text-gray-400">Issued:</span>
+                                    <span class="text-sm text-white font-medium">September 2025</span>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <span class="text-sm text-gray-400">Expires:</span>
+                                    <span class="text-sm text-white font-medium">No Expiration</span>
+                                </div>
+                            </div>
+                            
+                            <!-- Skills -->
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="inline-flex items-center px-2 py-1 text-xs font-medium bg-gray-800 text-yellow-400 rounded-full border border-gray-700">
+                                    Python
+                                </span>
+                                <span class="inline-flex items-center px-2 py-1 text-xs font-medium bg-gray-800 text-yellow-400 rounded-full border border-gray-700">
+                                    Django
+                                </span>
+                                <span class="inline-flex items-center px-2 py-1 text-xs font-medium bg-gray-800 text-yellow-400 rounded-full border border-gray-700">
+                                    REST APIs
+                                </span>
+                                <span class="inline-flex items-center px-2 py-1 text-xs font-medium bg-gray-800 text-yellow-400 rounded-full border border-gray-700">
+                                    PostgreSQL
+                                </span>
+                            </div>
+                            
+                            <!-- Action Links -->
+                            <div class="flex justify-between items-center">
+                                <a href="#" 
+                                class="text-yellow-400 hover:text-yellow-300 font-semibold text-sm inline-flex items-center transition-colors">
+                                    <i class="fas fa-certificate mr-1"></i> Certificate
+                                </a>
+                                <div class="text-gray-500 text-xs">
+                                    Backend Specialization
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- ProDev Backend Software Engineering -->
+                    <div class="cert-card group rounded-2xl p-6" data-aos="fade-up" data-aos-delay="400">
+                        <div class="relative h-48 overflow-hidden mb-6">
+                            <img 
+                                src="https://res.cloudinary.com/dzyqof9it/image/upload/v1758428409/certification/qroh3xplpiowcsex6iu2.png"
+                                alt="ProDev Backend Software Engineering Certification" 
+                                class="w-full h-full object-cover cert-image"
+                                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                            >
+                            <!-- Fallback if image fails to load -->
+                            <div class="image-fallback w-full h-full hidden bg-gradient-to-br from-purple-600 to-purple-800 flex items-center justify-center">
+                                <i class="fas fa-laptop-code text-white text-5xl"></i>
+                            </div>
+                            <div class="absolute top-4 right-4">
+                                <span class="inline-flex items-center px-3 py-1 text-xs font-medium cert-badge rounded-full">
+                                    ALX
+                                </span>
+                            </div>
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        </div>
+                        
+                        <div class="relative z-10">
+                            <h3 class="text-xl font-bold text-white mb-3 group-hover:text-yellow-400 transition-colors">
+                                ProDev Backend Software Engineering
+                            </h3>
+                            <p class="text-gray-400 mb-4 leading-relaxed text-sm">
+                                Advanced backend engineering certification focusing on scalable system design, microservices architecture, and DevOps practices. Gained expertise in advanced Python, async programming, API design, authentication systems, and containerization technologies.
+                            </p>
+                            
+                            <!-- Certification Details -->
+                            <div class="space-y-3 mb-4">
+                                <div class="flex justify-between items-center">
+                                    <span class="text-sm text-gray-400">Issuer:</span>
+                                    <span class="text-sm text-white font-medium">ALX Africa</span>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <span class="text-sm text-gray-400">Issued:</span>
+                                    <span class="text-sm text-white font-medium">August 2025</span>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <span class="text-sm text-gray-400">Expires:</span>
+                                    <span class="text-sm text-white font-medium">No Expiration</span>
+                                </div>
+                            </div>
+                            
+                            <!-- Skills -->
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="inline-flex items-center px-2 py-1 text-xs font-medium bg-gray-800 text-yellow-400 rounded-full border border-gray-700">
+                                    Microservices
+                                </span>
+                                <span class="inline-flex items-center px-2 py-1 text-xs font-medium bg-gray-800 text-yellow-400 rounded-full border border-gray-700">
+                                    Docker & Kubernetes
+                                </span>
+                                <span class="inline-flex items-center px-2 py-1 text-xs font-medium bg-gray-800 text-yellow-400 rounded-full border border-gray-700">
+                                    CI/CD
+                                </span>
+                                <span class="inline-flex items-center px-2 py-1 text-xs font-medium bg-gray-800 text-yellow-400 rounded-full border border-gray-700">
+                                    GraphQL
+                                </span>
+                            </div>
+                            
+                            <!-- Action Links -->
+                            <div class="flex justify-between items-center">
+                                <a href="#" 
+                                class="text-yellow-400 hover:text-yellow-300 font-semibold text-sm inline-flex items-center transition-colors">
+                                    <i class="fas fa-certificate mr-1"></i> Certificate
+                                </a>
+                                <div class="text-gray-500 text-xs">
+                                    Advanced Backend
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- ALX AI Career Essentials -->
+                    <div class="cert-card group rounded-2xl p-6" data-aos="fade-up" data-aos-delay="500">
+                        <div class="relative h-48 overflow-hidden mb-6">
+                            <img 
+                                src="https://res.cloudinary.com/dzyqof9it/image/upload/v1763037635/140-alx-aice-ai-career-essentials-2-0-certificate-damaris-chege_vd5nbs.png"
+                                alt="ALX AI Career Essentials Certification" 
+                                class="w-full h-full object-cover cert-image"
+                                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                            >
+                            <!-- Fallback if image fails to load -->
+                            <div class="image-fallback w-full h-full hidden bg-gradient-to-br from-indigo-600 to-indigo-800 flex items-center justify-center">
+                                <i class="fas fa-robot text-white text-5xl"></i>
+                            </div>
+                            <div class="absolute top-4 right-4">
+                                <span class="inline-flex items-center px-3 py-1 text-xs font-medium cert-badge rounded-full">
+                                    ALX
+                                </span>
+                            </div>
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        </div>
+                        
+                        <div class="relative z-10">
+                            <h3 class="text-xl font-bold text-white mb-3 group-hover:text-yellow-400 transition-colors">
+                                ALX AI Career Essentials (AiCE) 2.0
+                            </h3>
+                            <p class="text-gray-400 mb-4 leading-relaxed text-sm">
+                                Validated skills in leveraging AI tools for automation, content creation, ethical decision-making, and productivity optimization across professional environments. Focused on practical AI applications in modern workplaces.
+                            </p>
+                            
+                            <!-- Certification Details -->
+                            <div class="space-y-3 mb-4">
+                                <div class="flex justify-between items-center">
+                                    <span class="text-sm text-gray-400">Issuer:</span>
+                                    <span class="text-sm text-white font-medium">ALX Africa</span>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <span class="text-sm text-gray-400">Issued:</span>
+                                    <span class="text-sm text-white font-medium">October 2025</span>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <span class="text-sm text-gray-400">Expires:</span>
+                                    <span class="text-sm text-white font-medium">No Expiration</span>
+                                </div>
+                            </div>
+                            
+                            <!-- Skills -->
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="inline-flex items-center px-2 py-1 text-xs font-medium bg-gray-800 text-yellow-400 rounded-full border border-gray-700">
+                                    AI Ethics
+                                </span>
+                                <span class="inline-flex items-center px-2 py-1 text-xs font-medium bg-gray-800 text-yellow-400 rounded-full border border-gray-700">
+                                    Prompt Engineering
+                                </span>
+                                <span class="inline-flex items-center px-2 py-1 text-xs font-medium bg-gray-800 text-yellow-400 rounded-full border border-gray-700">
+                                    AI Governance
+                                </span>
+                                <span class="inline-flex items-center px-2 py-1 text-xs font-medium bg-gray-800 text-yellow-400 rounded-full border border-gray-700">
+                                    AI Tools
+                                </span>
+                            </div>
+                            
+                            <!-- Action Links -->
+                            <div class="flex justify-between items-center">
+                                <a href="#" 
+                                class="text-yellow-400 hover:text-yellow-300 font-semibold text-sm inline-flex items-center transition-colors">
+                                    <i class="fas fa-certificate mr-1"></i> Certificate
+                                </a>
+                                <div class="text-gray-500 text-xs">
+                                    AI Specialization
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Professional Foundations -->
+                    <div class="cert-card group rounded-2xl p-6" data-aos="fade-up" data-aos-delay="600">
+                        <div class="relative h-48 overflow-hidden mb-6">
+                            <img 
+                                src="https://res.cloudinary.com/dzyqof9it/image/upload/v1758368870/certification/knotqyxkrkr8umdvbn5k.png"
+                                alt="Professional Foundations Certification" 
+                                class="w-full h-full object-cover cert-image"
+                                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                            >
+                            <!-- Fallback if image fails to load -->
+                            <div class="image-fallback w-full h-full hidden bg-gradient-to-br from-orange-600 to-orange-800 flex items-center justify-center">
+                                <i class="fas fa-user-graduate text-white text-5xl"></i>
+                            </div>
+                            <div class="absolute top-4 right-4">
+                                <span class="inline-flex items-center px-3 py-1 text-xs font-medium cert-badge rounded-full">
+                                    ALX
+                                </span>
+                            </div>
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        </div>
+                        
+                        <div class="relative z-10">
+                            <h3 class="text-xl font-bold text-white mb-3 group-hover:text-yellow-400 transition-colors">
+                                Professional Foundations
+                            </h3>
+                            <p class="text-gray-400 mb-4 leading-relaxed text-sm">
+                                Intensive program focused on agile teamwork, user-centered design, and problem-solving with empathy. Built foundational habits in collaboration, communication, and adaptability while gaining hands-on experience with professional tools and project planning frameworks.
+                            </p>
+                            
+                            <!-- Certification Details -->
+                            <div class="space-y-3 mb-4">
+                                <div class="flex justify-between items-center">
+                                    <span class="text-sm text-gray-400">Issuer:</span>
+                                    <span class="text-sm text-white font-medium">ALX Africa</span>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <span class="text-sm text-gray-400">Issued:</span>
+                                    <span class="text-sm text-white font-medium">April 2025</span>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <span class="text-sm text-gray-400">Expires:</span>
+                                    <span class="text-sm text-white font-medium">No Expiration</span>
+                                </div>
+                            </div>
+                            
+                            <!-- Skills -->
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="inline-flex items-center px-2 py-1 text-xs font-medium bg-gray-800 text-yellow-400 rounded-full border border-gray-700">
+                                    Agile Methodology
+                                </span>
+                                <span class="inline-flex items-center px-2 py-1 text-xs font-medium bg-gray-800 text-yellow-400 rounded-full border border-gray-700">
+                                    Team Collaboration
+                                </span>
+                                <span class="inline-flex items-center px-2 py-1 text-xs font-medium bg-gray-800 text-yellow-400 rounded-full border border-gray-700">
+                                    Problem Solving
+                                </span>
+                                <span class="inline-flex items-center px-2 py-1 text-xs font-medium bg-gray-800 text-yellow-400 rounded-full border border-gray-700">
+                                    Communication
+                                </span>
+                            </div>
+                            
+                            <!-- Action Links -->
+                            <div class="flex justify-between items-center">
+                                <a href="#" 
+                                class="text-yellow-400 hover:text-yellow-300 font-semibold text-sm inline-flex items-center transition-colors">
+                                    <i class="fas fa-certificate mr-1"></i> Certificate
+                                </a>
+                                <div class="text-gray-500 text-xs">
+                                    Foundational Program
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Certification Summary -->
+                <div class="mt-16 bg-black rounded-2xl shadow-xl p-8 border border-yellow-600" data-aos="fade-up">
+                    <h3 class="text-2xl font-bold text-yellow-400 mb-8 text-center">Certification Journey</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <div class="text-center">
+                            <div class="w-20 h-20 bg-gradient-to-br from-yellow-600 to-yellow-800 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fab fa-aws text-white text-3xl"></i>
+                            </div>
+                            <h4 class="font-semibold text-white text-lg">AWS Certified</h4>
+                            <p class="text-gray-400 mt-2">Solutions Architect & Cloud Practitioner certifications validating cloud expertise</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="w-20 h-20 bg-gradient-to-br from-blue-600 to-blue-800 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-code text-white text-3xl"></i>
+                            </div>
+                            <h4 class="font-semibold text-white text-lg">Backend Specialization</h4>
+                            <p class="text-gray-400 mt-2">Comprehensive backend development training with Python, Django, and DevOps</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="w-20 h-20 bg-gradient-to-br from-purple-600 to-purple-800 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-robot text-white text-3xl"></i>
+                            </div>
+                            <h4 class="font-semibold text-white text-lg">AI & Professional</h4>
+                            <p class="text-gray-400 mt-2">AI career essentials and professional foundations for modern tech careers</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Projects Section -->
         <section id="projects" class="py-20 bg-gradient-to-b from-black-900 to-black-800">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1120,27 +1680,7 @@
                         </div>
                     </div>
                    
-                    <!-- Coming Soon Project -->
-                    <div class="project-card group relative bg-black rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border-2 border-dashed border-gray-600" data-aos="fade-up" data-aos-delay="600">
-                        <div class="relative h-48 overflow-hidden bg-gradient-to-br from-gray-700 to-gray-900">
-                            <div class="absolute inset-0 flex items-center justify-center flex-col">
-                                <i class="fas fa-plus-circle text-gray-400 text-5xl mb-4"></i>
-                                <p class="text-gray-400 font-semibold">Next Project</p>
-                            </div>
-                        </div>
-                        
-                        <div class="p-6 relative z-10 bg-black">
-                            <h3 class="text-xl font-bold text-gray-400 mb-3">
-                                Your Next Project
-                            </h3>
-                            <p class="text-gray-500 mb-4 leading-relaxed text-sm">
-                                Working on something amazing? This space is ready for your next innovative project.
-                            </p>
-                            
-                            <div class="text-center">
-                                <span class="inline-flex items-center px-4 py-2 text-sm font-medium bg-gray-800 text-gray-400 rounded-full">
-                                    Coming Soon
-                                </span>
+                    
                             </div>
                         </div>
                     </div>
@@ -1200,64 +1740,6 @@
                 </div>
             </div>
         </section>
-
-        <style>
-        /* Filter button active state */
-        .filter-btn.active {
-            background: linear-gradient(90deg, #D4AF37, #FFD700);
-            color: #000;
-        }
-
-        /* Project card animations */
-        .project-card {
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .project-card:hover {
-            transform: translateY(-8px) scale(1.02);
-            box-shadow: 0 25px 50px -12px rgba(212, 175, 55, 0.25);
-        }
-        </style>
-
-        <script>
-        // Filter functionality for projects
-        document.addEventListener('DOMContentLoaded', function() {
-            const filterButtons = document.querySelectorAll('.filter-btn');
-            const projectCards = document.querySelectorAll('.project-card');
-            
-            filterButtons.forEach(button => {
-                button.addEventListener('click', function() {
-                    const filter = this.getAttribute('data-filter');
-                    
-                    // Remove active class from all buttons
-                    filterButtons.forEach(btn => {
-                        btn.classList.remove('active');
-                        btn.classList.remove('bg-yellow-600', 'text-black');
-                        btn.classList.add('bg-gray-800', 'text-yellow-400');
-                    });
-                    
-                    // Add active class to clicked button
-                    this.classList.add('active');
-                    this.classList.add('bg-yellow-600', 'text-black');
-                    this.classList.remove('bg-gray-800', 'text-yellow-400');
-                    
-                    // Filter projects
-                    projectCards.forEach(card => {
-                        if (filter === 'all') {
-                            card.style.display = 'block';
-                        } else {
-                            const projectType = card.querySelector('span').textContent.toLowerCase();
-                            if (projectType.includes(filter)) {
-                                card.style.display = 'block';
-                            } else {
-                                card.style.display = 'none';
-                            }
-                        }
-                    });
-                });
-            });
-        });
-        </script>
 
         <!-- Contact Section -->
         <section id="contact" class="py-20 max-w-3xl mx-auto px-8 rounded-2xl shadow-lg border border-yellow-600 mt-16 bg-black">
@@ -1344,6 +1826,7 @@
                 <a href="#home" class="block text-muted hover:text-[#D4AF37] transition-colors">Home</a>
                 <a href="#about" class="block text-muted hover:text-[#D4AF37] transition-colors">About Me</a>
                 <a href="#skills" class="block text-muted hover:text-[#D4AF37] transition-colors">Skills</a>
+                <a href="#certifications" class="block text-muted hover:text-[#D4AF37] transition-colors">Certifications</a>
                 <a href="#projects" class="block text-muted hover:text-[#D4AF37] transition-colors">Projects</a>
                 <a href="#contact" class="block text-muted hover:text-[#D4AF37] transition-colors">Contact</a>
                 </nav>
@@ -1449,6 +1932,53 @@
                 
                 card.addEventListener('mouseleave', function() {
                     this.style.transform = 'translateY(0) scale(1)';
+                });
+            });
+            
+            // Add hover effects to certification cards
+            const certCards = document.querySelectorAll('.cert-card');
+            certCards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-8px)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                });
+            });
+            
+            // Filter functionality for projects
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const filter = this.getAttribute('data-filter');
+                    
+                    // Remove active class from all buttons
+                    filterButtons.forEach(btn => {
+                        btn.classList.remove('active');
+                        btn.classList.remove('bg-yellow-600', 'text-black');
+                        btn.classList.add('bg-gray-800', 'text-yellow-400');
+                    });
+                    
+                    // Add active class to clicked button
+                    this.classList.add('active');
+                    this.classList.add('bg-yellow-600', 'text-black');
+                    this.classList.remove('bg-gray-800', 'text-yellow-400');
+                    
+                    // Filter projects
+                    projectCards.forEach(card => {
+                        if (filter === 'all') {
+                            card.style.display = 'block';
+                        } else {
+                            const projectType = card.querySelector('span').textContent.toLowerCase();
+                            if (projectType.includes(filter)) {
+                                card.style.display = 'block';
+                            } else {
+                                card.style.display = 'none';
+                            }
+                        }
+                    });
                 });
             });
         });
