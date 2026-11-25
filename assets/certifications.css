@@ -1,0 +1,101 @@
+/* =====================================================================
+   Professional Certifications — carousel
+   Scoped styles. Depends on existing .cert-card / .cert-image rules.
+   ===================================================================== */
+
+.cert-carousel {
+    position: relative;
+}
+
+.cert-viewport {
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    outline: none;
+    padding: 0.5rem 0 1rem;
+}
+
+.cert-viewport::-webkit-scrollbar {
+    display: none;
+}
+
+.cert-track {
+    display: flex;
+    gap: 2rem;
+    align-items: stretch;
+}
+
+.cert-track > .cert-card {
+    scroll-snap-align: start;
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin: 0;
+}
+
+@media (min-width: 768px) {
+    .cert-track > .cert-card {
+        flex: 0 0 calc(50% - 1rem);
+    }
+}
+
+@media (min-width: 1024px) {
+    .cert-track > .cert-card {
+        flex: 0 0 calc(33.333% - 1.333rem);
+    }
+}
+
+.cert-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+.cert-btn {
+    width: 44px;
+    height: 44px;
+    border-radius: 9999px;
+    border: 1px solid rgba(212, 175, 55, 0.4);
+    background: rgba(26, 26, 26, 0.9);
+    color: #D4AF37;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.cert-btn:hover {
+    background: linear-gradient(90deg, #D4AF37, #FFD700);
+    color: #000;
+    border-color: #D4AF37;
+}
+
+.cert-dots {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.cert-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 9999px;
+    border: none;
+    background: rgba(255, 255, 255, 0.25);
+    cursor: pointer;
+    padding: 0;
+    transition: all 0.3s ease;
+}
+
+.cert-dot.is-active {
+    background: #D4AF37;
+    width: 24px;
+}
